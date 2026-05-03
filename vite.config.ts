@@ -7,6 +7,9 @@ import path from 'path'
 export default defineConfig({
   base: '/hack2skill/',
   plugins: [react(), tailwindcss()],
+  build: {
+    chunkSizeWarningLimit: 1000,
+  },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
